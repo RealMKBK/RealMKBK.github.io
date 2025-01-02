@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>新版已改为主站</title>
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f3f4f6;
+      font-family: Arial, sans-serif;
+      background-image: url('http://cdnjson.com/images/2025/01/02/6997dcf91533e1ef64e14bb13e5f9c4f.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .loading-message {
+      text-align: center;
+      color: white;
+      text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      animation: fadeIn 1.5s ease-in-out forwards;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .loading-message a {
+      color: white;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="loading-message">
+    <h1>已失效</h1>
+    <p>如果您没有自动跳转，请点击下面的链接</p>
+    <a href="https://RealMKBK.github.io" id="redirectLink">立即跳转</a>
+  </div>
+  
+  <script>
+    window.onload = function() {
+      var redirectTime = 3000;
+      var redirectURL = "https://RealMKBK.github.io";
+      setTimeout(function() {
+        window.location.href = redirectURL;
+      }, redirectTime);
+    };
+  </script>
+</body>
+</html>
