@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hi 这里是RealMKBK🎉</title>
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-image: url('http://cdnjson.com/images/2025/01/02/6997dcf91533e1ef64e14bb13e5f9c4f.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .avatar {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: 20px auto;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+      animation: fadeInUp 0.7s ease-out forwards;
+      opacity: 0;
+    }
+    .avatar img {
+      width: 100%;
+      height: auto;
+      border-radius: 50%;
+    }
+    .name, .signature, .footer-statement {
+      text-align: center;
+      color: white;
+      text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
+      opacity: 0;
+    }
+    .name {
+      font-size: 24px;
+      margin-bottom: 10px;
+      animation: fadeInUp 0.7s ease-out forwards 0.35s;
+    }
+    .signature {
+      font-size: 16px;
+      margin-top: 20px;
+      animation: fadeInUp 0.7s ease-out forwards 0.7s;
+    }
+    .footer-statement {
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+      right: 0;
+      font-size: 12px;
+      animation: fadeInUp 0.7s ease-out forwards 1.05s;
+    }
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+  <script>
+    var musicPlaying = false;
+
+    document.addEventListener('DOMContentLoaded', function() {
+      document.addEventListener('click', function() {
+        if (!musicPlaying) {
+          var audio = new Audio('http://music.163.com/song/media/outer/url?id=1406083061.mp3');
+          audio.play();
+          musicPlaying = true;
+
+          audio.onended = function() {
+            musicPlaying = false;
+          };
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="avatar">
+    <img src="http://cdnjson.com/images/2025/01/02/91d79c0023ba2fb08fb508cb0bc108b1.jpg" alt="头像">
+  </div>
+  <div class="name">RealMKBK</div>
+  <div class="signature">💫天天开心.</div>
+  <div class="footer-statement">
+    <a href="http://RealMKBK.github.io" target="_blank" style="color: white; text-decoration: none;">版权所有 &copy; 2025 RealMKBK</a>
+  </div>
+</body>
+</html>
+<!--code is far away from bug with the animal protecting🙏-->
