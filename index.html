@@ -1,136 +1,178 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hi 这里是RealMKBK🎉</title>
-  <style>
-    body, html {
-      height: 100%;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      background-image: url('http://cdnjson.com/images/2025/01/02/6997dcf91533e1ef64e14bb13e5f9c4f.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-    .avatar {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      overflow: hidden;
-      margin: 20px auto;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-      animation: fadeInUp 0.7s ease-out forwards;
-      opacity: 0;
-    }
-    .avatar img {
-      width: 100%;
-      height: auto;
-      border-radius: 50%;
-    }
-    .name, .signature, .footer-statement {
-      text-align: center;
-      color: white;
-      text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
-      opacity: 0;
-    }
-    .name {
-      font-size: 25px;
-      margin-bottom: 10px;
-      animation: fadeInUp 0.7s ease-out forwards 0.35s;
-    }
-    .signature {
-      font-size: 13px;
-      margin-top: 0px;
-      animation: fadeInUp 0.7s ease-out forwards 0.7s;
-    }
-    .social-media-buttons {
-      display: flex;
-      justify-content: center;
-      margin-top: 20px;
-      animation: fadeInUp 0.7s ease-out forwards 1.05s;
-      opacity: 0;
-    }
-    .social-media-btn {
-      margin: 0 5px;
-    }
-    .social-media-btn img {
-      width: 33px;
-      height: 33px;
-      transition: transform 0.3s ease;
-    }
-    .social-media-btn img:hover {
-      transform: scale(1.2);
-    }
-    .footer-statement {
-      position: absolute;
-      bottom: 10px;
-      left: 0;
-      right: 0;
-      font-size: 8px;
-      animation: fadeInUp 0.7s ease-out forwards 1.4s;
-    }
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-  </style>
-  <script>
-    var musicPlaying = false;
-
-    document.addEventListener('DOMContentLoaded', function() {
-      document.addEventListener('click', function() {
-        if (!musicPlaying) {
-          var audio = new Audio('http://music.163.com/song/media/outer/url?id=1406083061.mp3');
-          audio.play();
-          musicPlaying = true;
-
-          audio.onended = function() {
-            musicPlaying = false;
-          };
-        }
-      });
-    });
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hi 这里是RealMKBK🎉</title>
 </head>
+
 <body>
-  <div class="avatar">
-    <img src="http://cdnjson.com/images/2025/01/02/91d79c0023ba2fb08fb508cb0bc108b1.jpg" alt="头像">
-  </div>
-  <div class="name">RealMKBK</div>
-  <div class="signature">💫天天开心.</div>
-  <div class="social-media-buttons">
-    <a href="https://qm.qq.com/q/17ooOgStQI" target="_blank" class="social-media-btn">
-      <img src="http://cdnjson.com/images/2025/01/02/QQ.png" alt="QQ">
-    </a>
-    <a href="https://u.wechat.com/EIOXB73E-j_QgTt8mh_HCpc" target="_blank" class="social-media-btn">
-      <img src="http://cdnjson.com/images/2025/01/02/9957cd15889bbbdef59b51a92d5d7877.png" alt="微信">
-    </a>
-    <a href="https://y.music.163.com/m/user?id=12344237383" target="_blank" class="social-media-btn">
-      <img src="http://cdnjson.com/images/2025/01/02/f4eee719ec6c6af60de28323285fa8e8.png" alt="网易云">
-    </a>
-    <a href="https://t.me/RealMKBK" target="_blank" class="social-media-btn">
-      <img src="http://cdnjson.com/images/2025/01/02/TG.png" alt="TG">
-    </a>
-    <a href="https://bili2233.cn/tN6tY1T" target="_blank" class="social-media-btn">
-      <img src="http://cdnjson.com/images/2025/01/02/Bilibili.png" alt="哔哩哔哩">
-    </a>
-    <a href="https://v.kuaishou.com/duNCEk" target="_blank" class="social-media-btn">
-      <img src="http://cdnjson.com/images/2025/01/02/5fefd20aac5da464a65de4ee6031d8e6.png" alt="快手">
-    </a>
-  </div>
-  <div class="footer-statement">
-    <a href="http://RealMKBK.github.io/old" target="_blank" style="color: white; text-decoration: none;">版权所有 &copy; 2025 RealMKBK</a>
-  </div>
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-image: url('http://cdnjson.com/images/2025/01/02/6997dcf91533e1ef64e14bb13e5f9c4f.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .avatar {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 20px auto;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+            animation: fadeInUp 0.7s ease-out forwards;
+            opacity: 0;
+        }
+
+        .avatar img {
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+        }
+
+        .name,
+        .signature,
+        .footer-statement {
+            text-align: center;
+            color: white;
+            text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
+            opacity: 0;
+        }
+
+        .name {
+            font-size: 25px;
+            margin-bottom: 10px;
+            animation: fadeInUp 0.7s ease-out forwards 0.35s;
+        }
+
+        .signature {
+            font-size: 13px;
+            margin-top: 0px;
+            animation: fadeInUp 0.7s ease-out forwards 0.7s;
+        }
+
+        .social-media-buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            animation: fadeInUp 0.7s ease-out forwards 1.05s;
+            opacity: 0;
+        }
+
+        .social-media-btn {
+            margin: 0 5px;
+        }
+
+        .social-media-btn img {
+            width: 33px;
+            height: 33px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-media-btn img:hover {
+            transform: scale(1.2);
+        }
+
+        .footer-statement {
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            right: 0;
+            font-size: 8px;
+            animation: fadeInUp 0.7s ease-out forwards 1.4s;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        #record {
+            position: fixed;
+            right: 15px;
+            bottom: 15px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-image: url('http://cdnjson.com/images/2025/01/03/IMG_3988.jpg');
+            background-size: cover;
+            animation: spin 10s linear infinite;
+            animation-play-state: paused;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+<div id="record" onclick="togglePlay()"></div>
+    <audio id="music" loop>
+        <source src="http://music.163.com/song/media/outer/url?id=1996909642.mp3" type="audio/mpeg">
+    </audio>
+    <script>
+        const music = document.getElementById('music');
+        const record = document.getElementById('record');
+
+        function togglePlay() {
+            if (music.paused) {
+                music.play();
+                record.style.animationPlayState = 'running'; // 开始旋转
+            } else {
+                music.pause();
+                record.style.animationPlayState = 'paused'; // 停止旋转
+            }
+        }
+    </script>
+    <div class="avatar">
+        <img src="http://cdnjson.com/images/2025/01/02/91d79c0023ba2fb08fb508cb0bc108b1.jpg" alt="头像">
+    </div>
+    <div class="name">RealMKBK</div>
+    <div class="signature">💫天天开心.</div>
+    <div class="social-media-buttons">
+        <a href="https://qm.qq.com/q/17ooOgStQI" target="_blank" class="social-media-btn">
+            <img src="http://cdnjson.com/images/2025/01/02/QQ.png" alt="QQ">
+        </a>
+        <a href="https://u.wechat.com/EIOXB73E-j_QgTt8mh_HCpc" target="_blank" class="social-media-btn">
+            <img src="http://cdnjson.com/images/2025/01/02/9957cd15889bbbdef59b51a92d5d7877.png" alt="微信">
+        </a>
+        <a href="https://y.music.163.com/m/user?id=12344237383" target="_blank" class="social-media-btn">
+            <img src="http://cdnjson.com/images/2025/01/02/f4eee719ec6c6af60de28323285fa8e8.png" alt="网易云">
+        </a>
+        <a href="https://t.me/RealMKBK" target="_blank" class="social-media-btn">
+            <img src="http://cdnjson.com/images/2025/01/02/TG.png" alt="TG">
+        </a>
+        <a href="https://bili2233.cn/tN6tY1T" target="_blank" class="social-media-btn">
+            <img src="http://cdnjson.com/images/2025/01/02/Bilibili.png" alt="哔哩哔哩">
+        </a>
+        <a href="https://v.kuaishou.com/duNCEk" target="_blank" class="social-media-btn">
+            <img src="http://cdnjson.com/images/2025/01/02/5fefd20aac5da464a65de4ee6031d8e6.png" alt="快手">
+        </a>
+    </div>
+    <div class="footer-statement">
+        <a href="http://RealMKBK.github.io/old" target="_blank" style="color: white; text-decoration: none;">版权所有 &copy; 2025 RealMKBK</a>
+    </div>
 </body>
+
 </html>
