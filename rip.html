@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>李狼灵堂</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <script>
+        document.addEventListener('click', function() {
+            var audio = document.getElementById('backgroundMusic');
+            if (audio.paused) {
+                audio.play();
+            }
+        });
+        document.addEventListener('click', function() {
+            alert('六百六十六，我看你是相思了');
+        });
+    </script>
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .memorial-hall {
+            text-align: center;
+            padding: 50px;
+            background-color: #f0f0f0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .memorial-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .name {
+            font-size: 2em;
+            margin-top: 20px;
+        }
+
+        .bio {
+            max-width: 600px;
+            margin-top: 10px;
+            font-size: 1em;
+            line-height: 1.6;
+        }
+    </style>
+    <div class="memorial-hall">
+        <img src="http://cdnjson.com/images/2025/01/03/16_20250103160139.jpg" alt="纪念照片" class="memorial-image">
+        <h1 class="name">李狼</h1>
+        <p class="bio">这位所谓的“教育者”实为师表的耻辱，其种种不堪行为不仅践踏了教育的神圣使命，更是对孩子们成长环境的严重污染。其生后评价，唯有毫不留情的谴责，以揭露其教育的伪善与失败（内容为小说情节纯属虚构，如有同名纯属巧合）</p>
+        <audio id="backgroundMusic" loop>
+            <source src="http://music.163.com/song/media/outer/url?id=395194.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+</body>
+
+</html>
