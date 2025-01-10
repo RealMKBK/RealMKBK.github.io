@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>此接口已关闭</title>
+    <style>
+        body {
+            background-color: blue;
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .icon {
+            width: 100px;
+            height: 100px;
+            background-image: url('http://cdnjson.com/images/2025/01/11/33_20250111000716.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin: 20px auto;
+        }
+
+        .text {
+            margin: 10px 0;
+        }
+
+        .underline {
+            text-decoration: underline;
+        }
+
+        .small-text {
+            font-size: 0.5em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="icon"></div>
+    <div class="text">此接口已关闭</div>
+    <div class="text">您的ip地址已被记录</div>
+    <div class="text underline">互联网不是法外之地</div>
+    <div id="ip-address" class="small-text"></div>
+
+    <script>
+        fetch('https://api.ipify.org?format=json')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('ip-address').textContent = 'IP＝' + data.ip + "PIP＝" + window.location.href;
+            })
+            .catch(error => {
+                console.error('无法获取IP地址:', error);
+                document.getElementById('ip-address').textContent = '无法获取您的IP地址';
+            });
+    </script>
+</body>
+
+</html>
