@@ -40,7 +40,7 @@ gen_id(input('🆔输入身份证:\n >'))
 ids = open("sfz.fk").read().splitlines()
 print(f"⚠️准备核验 {len(ids)} 个身份证号中")
 success = []
-with ThreadPoolExecutor(max_workers=100) as executor:
+with ThreadPoolExecutor(max_workers=45) as executor:
     futures = [executor.submit(check_id, id_card) for id_card in ids]
     for i, future in enumerate(as_completed(futures), 1):
         print(f"\r♻️{i}/{len(ids)}", end="", flush=True)
