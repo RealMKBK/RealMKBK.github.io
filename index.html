@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>你闯进了窝の秘密基地le</title>
+    <title>Hi 这里是RealMKBK🎉</title>
 </head>
-
 <body class="font-mono">
     <style>
-        body,
-        html {
-            height: 100%;
+        body, html {
+            min-height: 100%;
             margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            background-image: url('http://cdnjson.com/images/2025/02/15/CapooBackground.jpg');
+            background-image: url('https://img.picui.cn/free/2025/04/17/67fffc95bba01.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            background-attachment: fixed;
         }
-
+        .header-content {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
         .avatar {
             width: 140px;
             height: 140px;
@@ -33,34 +33,29 @@
             animation: fadeInUp 0.7s ease-out forwards;
             opacity: 0;
         }
-
         .avatar img {
             width: 100%;
             height: auto;
             border-radius: 50%;
         }
-
         .name,
         .signature,
         .footer-statement {
             text-align: center;
             color: white;
-            text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
+            text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7);
             opacity: 0;
         }
-
         .name {
             font-size: 25px;
             margin-bottom: 10px;
             animation: fadeInUp 0.7s ease-out forwards 0.35s;
         }
-
         .signature {
-            font-size: 13px;
+            font-size: 15px;
             margin-top: 0px;
             animation: fadeInUp 0.7s ease-out forwards 0.7s;
         }
-
         .social-media-buttons {
             display: flex;
             justify-content: center;
@@ -68,42 +63,34 @@
             animation: fadeInUp 0.7s ease-out forwards 1.05s;
             opacity: 0;
         }
-
         .social-media-btn {
             margin: 0 5px;
         }
-
         .social-media-btn img {
             width: 33px;
             height: 33px;
             transition: transform 0.3s ease;
         }
-
         .social-media-btn img:hover {
             transform: scale(1.2);
         }
-
         .footer-statement {
-            position: absolute;
-            bottom: 10px;
-            left: 0;
-            right: 0;
-            font-size: 8px;
-            animation: fadeInUp 0.7s ease-out forwards 1.4s;
+            text-align: center;
+            font-size: 10px;
+            margin: 60px 0 20px;
+            opacity: 0;
+            animation: fadeInUp 0.7s ease-out forwards 1.8s;
         }
-
         @keyframes fadeInUp {
             from {
                 opacity: 0;
                 transform: translateY(20px);
             }
-
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
-
         #record {
             position: fixed;
             right: 15px;
@@ -111,22 +98,129 @@
             width: 50px;
             height: 50px;
             border-radius: 50%;
-            background-image: url('http://cdnjson.com/images/2025/02/15/You.jpg');
+            background-image: url('https://img.picui.cn/free/2025/04/17/67fffd9a219fa.jpg');
             background-size: cover;
             animation: spin 10s linear infinite;
             animation-play-state: paused;
         }
-
         @keyframes spin {
             from {
                 transform: rotate(0deg);
             }
-
             to {
                 transform: rotate(360deg);
             }
         }
+        .projects {
+            width: 90%;
+            max-width: 800px;
+            margin: 30px auto;
+            text-align: center;
+            opacity: 0; /* 初始隐藏 */
+            transform: translateY(20px);
+            transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+        }
+        .projects.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .project-item {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+        .projects.visible .project-item {
+            animation: fadeInUpSlow 0.7s forwards;
+        }
+        .projects.visible .project-item:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+        .projects.visible .project-item:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+        .projects.visible .project-item:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+        .projects h2 {
+            color: white;
+            font-size: 28px;
+            margin-bottom: 20px;
+            text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7);
+        }
+        .project-item {
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+        .project-item:hover {
+            transform: scale(1.2);
+        }
+        .project-item a {
+            text-decoration: none;
+            color: white;
+        }
+        .project-item img {
+            width: 100%;
+            max-width: 350px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .project-description {
+            margin-top: 10px;
+            font-size: 16px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+        @keyframes fadeInUpSlow {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .header-content {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        body::-webkit-scrollbar {
+            display: none;
+        }
+        body {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
     </style>
+    <div class="header-content">
+        <div class="avatar">
+            <img src="https://img.picui.cn/free/2025/04/17/67fffd98010f9.jpg" alt="头像">
+        </div>
+        <div class="name">RealMKBK</div>
+        <div class="signature">💫天天开心.</div>
+        <div class="social-media-buttons">
+            <a href="mqqapi://card/show_pslcard?src_type=internal&version=1&uin=1072755450" target="_blank" class="social-media-btn">
+                <img src="https://img.picui.cn/free/2025/04/17/67fffc4fd7016.png" alt="QQ">
+            </a>
+            <a href="weixin://scanqrcode" target="_blank" class="social-media-btn">
+                <img src="https://img.picui.cn/free/2025/04/17/67fffc4fdfed6.png" alt="微信">
+            </a>
+            <a href="https://y.music.163.com/m/user?id=12344237383" target="_blank" class="social-media-btn">
+                <img src="https://img.picui.cn/free/2025/04/17/67fffc5002060.png" alt="网易云">
+            </a>
+            <a href="https://t.me/XiaoMaoFish" target="_blank" class="social-media-btn">
+                <img src="https://img.picui.cn/free/2025/04/17/67fffc5004874.png" alt="TG">
+            </a>
+            <a href="https://bili2233.cn/tN6tY1T" target="_blank" class="social-media-btn">
+                <img src="https://img.picui.cn/free/2025/04/17/67fffc4fe99b7.png" alt="哔哩哔哩">
+            </a>
+            <a href="https://v.kuaishou.com/duNCEk" target="_blank" class="social-media-btn">
+                <img src="https://img.picui.cn/free/2025/04/17/67fffc517ee68.png" alt="快手">
+            </a>
+        </div>
+    </div>
     <div id="record" onclick="togglePlay()"></div>
     <audio id="music" loop>
         <source src="http://music.163.com/song/media/outer/url?id=1996909642.mp3" type="audio/mpeg">
@@ -134,7 +228,6 @@
     <script>
         const music = document.getElementById('music');
         const record = document.getElementById('record');
-
         function togglePlay() {
             if (music.paused) {
                 music.play();
@@ -145,34 +238,37 @@
             }
         }
     </script>
-    <div class="avatar">
-        <img src="http://cdnjson.com/images/2025/02/15/Capoo.jpg" alt="头像">
-    </div>
-    <div class="name">窝の小窝</div>
-    <div class="signature">贝贝你没输完整👉 RealMKBK.github.io/用户通用规范.pdf</div>
-    <div class="social-media-buttons">
-        <a href="去掉le" target="_blank" class="social-media-btn">
-            <img src="http://cdnjson.com/images/2025/02/15/QQ.png" alt="QQ">
-        </a>
-        <a href="去掉le" target="_blank" class="social-media-btn">
-            <img src="http://cdnjson.com/images/2025/02/15/WeChat.png" alt="微信">
-        </a>
-        <a href="去掉le" target="_blank" class="social-media-btn">
-            <img src="http://cdnjson.com/images/2025/02/15/NeteaseCloudMusic.png" alt="网易云">
-        </a>
-        <a href="去掉le" target="_blank" class="social-media-btn">
-            <img src="http://cdnjson.com/images/2025/02/15/TG.png" alt="TG">
-        </a>
-        <a href="去掉le" target="_blank" class="social-media-btn">
-            <img src="http://cdnjson.com/images/2025/02/15/Bilibili.png" alt="哔哩哔哩">
-        </a>
-        <a href="去掉le" target="_blank" class="social-media-btn">
-            <img src="http://cdnjson.com/images/2025/02/15/Kuaishou.png" alt="快手">
-        </a>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const projectsSection = document.querySelector('.projects');
+            const observer = new IntersectionObserver((entries, obs) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        obs.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            observer.observe(projectsSection);
+        });
+    </script>
+    <div class="projects">
+        <h2>项目展示</h2>
+        <div class="project-item">
+            <a href="https://rlmk.cc" target="_blank">
+                <img src="https://img.picui.cn/free/2025/04/17/68000ce5a7367.png" alt="项目1">
+                <div class="project-description">XMChat</div>
+            </a>
+        </div>
+        <div class="project-item">
+            <a href="/" target="_blank">
+                <img src="https://img.picui.cn/free/2025/04/17/67fffc95bba01.jpg" alt="项目2">
+                <div class="project-description">尽请期待...</div>
+            </a>
+        </div>
     </div>
     <div class="footer-statement">
         <a href="http://RealMKBK.github.io/old" target="_blank" style="color: white; text-decoration: none;">☁️版权所有 &copy; 2025 RealMKBK</a>
     </div>
 </body>
-
 </html>
